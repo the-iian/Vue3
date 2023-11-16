@@ -9,12 +9,16 @@
     <input type="text" v-bind:placeholder="message">
     <hr>
     <button v-on:click="reverseMassage">click</button>
+    <hr>
+    {{username}}
+    <input type="text" v-model="username">
   </div>
   <script>
     const app = Vue.createApp({
       data() {
         return {
           message: "값을 입력해주세요",
+          username: "가나다",
         }
       },
     methods: {
