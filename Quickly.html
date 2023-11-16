@@ -8,7 +8,7 @@
   <div id="app">
     <input type="text" v-bind:placeholder="message">
     <hr>
-    <button v-on:click="hello">click</button>
+    <button v-on:click="reverseMassage">click</button>
   </div>
   <script>
     const app = Vue.createApp({
@@ -20,6 +20,9 @@
     methods: {
         hello(){
             alert("hello~");
+        },
+        reverseMassage(){
+          this.message = this.message.split("").reverse().join("");
         }
     },
 });
