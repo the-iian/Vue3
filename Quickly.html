@@ -7,16 +7,23 @@
 <body>
   <div id="app">
     <input type="text" v-bind:placeholder="message">
+    <hr>
+    <button v-on:click="hello">click</button>
   </div>
   <script>
-    const Counter = {
+    const app = Vue.createApp({
       data() {
         return {
-          message: '텍스트를 입력해주세요'
+          message: "값을 입력해주세요",
         }
-      }
-    }
-    Vue.createApp(Counter).mount('#app')
+      },
+    methods: {
+        hello(){
+            alert("hello~");
+        }
+    },
+});
+    app.mount('#app')
   </script>
 </body>
 </html>
