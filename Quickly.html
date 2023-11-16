@@ -12,6 +12,9 @@
     <hr>
     {{username}}
     <input type="text" v-model="username">
+    <hr>
+    <p v-if="visible">보이나요?</p>
+    <button type="button" v-on:click="visible=true">visible</button>
   </div>
   <script>
     const app = Vue.createApp({
@@ -19,6 +22,7 @@
         return {
           message: "값을 입력해주세요",
           username: "가나다",
+          visible:false,
         }
       },
     methods: {
