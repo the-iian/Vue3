@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Quickly</title>
+  <script src="https://unpkg.com/vue@next"></script>
+</head>
+<body>
+  <div id="app">
+    <input type="text" v-bind:placeholder="message">
+  </div>
+  <script>
+    const Counter = {
+      data() {
+        return {
+          message: '텍스트를 입력해주세요'
+        }
+      }
+    }
+    Vue.createApp(Counter).mount('#app')
+  </script>
+</body>
+</html>
